@@ -28,7 +28,7 @@ int main() {
     Employee emp[50];
 
     if (n > 50) {
-        printf("Введите меньше 50!\n");
+        printf("Запись ограничена! Запись 50 сотрудников:\n");
     }
     for (int i = 0; i < n; i++) {
         printf("\n--- Сотрудник №%d ---\n", i + 1);
@@ -52,7 +52,7 @@ int main() {
         scanf("%d %d %d", &emp[i].day, &emp[i].month, &emp[i].year);
     }
 
-    // ЗАПИСЬ В ФАЙЛ
+    
     char filename[100];
     printf("\nВведите имя файла для сохранения (например: employees.txt): ");
     scanf("%s", filename);
@@ -63,7 +63,7 @@ int main() {
         return 1;
     }
 
-    // Записываем в файл
+    
     fprintf(file, "ОТЧЕТ ПО СОТРУДНИКАМ\n");
     fprintf(file, "====================\n");
     fprintf(file, "Всего сотрудников: %d\n\n", n);
